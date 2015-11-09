@@ -130,7 +130,7 @@ class BackEndHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 			elif CorrectNodes[hashedkey] == CorrectNodes[1]:
 				logging.info('TWO')
 				logging.info(NodeList[1])
-				logging.info(hashedkey)
+				logging.info(hashedkey)	
 				self.putTestObject(self.path, value, NodeList[1])
 			elif CorrectNodes[hashedkey] == CorrectNodes[2]:
 				logging.info('THREE')
@@ -205,7 +205,6 @@ if __name__ == '__main__':
 		server_thread = threading.Thread(target = httpd.serve)
 		server_thread.daemon = True
 		server_thread.start()
-
 
 		
 		def handler(signum, frame):
